@@ -97,7 +97,7 @@ class CUDASetup:
 
         package_dir = Path(__file__).parent.parent
         binary_path = package_dir / binary_name
-
+        print(package_dir, binary_name)
         try:
             if not binary_path.exists():
                 self.add_log_entry(f"CUDA SETUP: Required library version not found: {binary_name}. Maybe you need to compile it from source?")
